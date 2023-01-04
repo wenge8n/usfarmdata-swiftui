@@ -15,6 +15,9 @@
 		84140C1329658EAA00FA5D64 /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C0F29658EAA00FA5D64 /* LoginResponse.swift */; };
 		84140C1429658EAA00FA5D64 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C1029658EAA00FA5D64 /* ListModel.swift */; };
 		84140C1529658EAA00FA5D64 /* GetListIdResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C1129658EAA00FA5D64 /* GetListIdResponse.swift */; };
+		84140C192965923C00FA5D64 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C182965923C00FA5D64 /* LoginScreen.swift */; };
+		84140C1C2965925D00FA5D64 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C1B2965925D00FA5D64 /* HomeScreen.swift */; };
+		84140C1E2965928700FA5D64 /* ForgotPasswordScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84140C1D2965928700FA5D64 /* ForgotPasswordScreen.swift */; };
 		84801DED295F359D003BD218 /* USFarmDataApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84801DEC295F359D003BD218 /* USFarmDataApp.swift */; };
 		84801DEF295F359D003BD218 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84801DEE295F359D003BD218 /* ContentView.swift */; };
 		84801DF1295F359E003BD218 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84801DF0295F359E003BD218 /* Assets.xcassets */; };
@@ -30,6 +33,9 @@
 		84140C0F29658EAA00FA5D64 /* LoginResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		84140C1029658EAA00FA5D64 /* ListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		84140C1129658EAA00FA5D64 /* GetListIdResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetListIdResponse.swift; sourceTree = "<group>"; };
+		84140C182965923C00FA5D64 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
+		84140C1B2965925D00FA5D64 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		84140C1D2965928700FA5D64 /* ForgotPasswordScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordScreen.swift; sourceTree = "<group>"; };
 		84801DE9295F359D003BD218 /* USFarmData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USFarmData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84801DEC295F359D003BD218 /* USFarmDataApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USFarmDataApp.swift; sourceTree = "<group>"; };
 		84801DEE295F359D003BD218 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		84140C172965920C00FA5D64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84801DEE295F359D003BD218 /* ContentView.swift */,
+				84140C1A2965924300FA5D64 /* Auth */,
+				84140C1F2965928E00FA5D64 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84140C1A2965924300FA5D64 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				84140C182965923C00FA5D64 /* LoginScreen.swift */,
+				84140C1D2965928700FA5D64 /* ForgotPasswordScreen.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		84140C1F2965928E00FA5D64 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				84140C1B2965925D00FA5D64 /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		84801DE0295F359D003BD218 = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +154,7 @@
 				84140C0829658DE200FA5D64 /* Extensions */,
 				84140C0D29658E8400FA5D64 /* Helpers */,
 				84140C1629658EB600FA5D64 /* Models */,
-				84801DEE295F359D003BD218 /* ContentView.swift */,
+				84140C172965920C00FA5D64 /* Views */,
 				84801DF0295F359E003BD218 /* Assets.xcassets */,
 				84801DF2295F359E003BD218 /* Preview Content */,
 			);
@@ -251,14 +284,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				84140C0C29658E7600FA5D64 /* Constants.swift in Sources */,
+				84140C1E2965928700FA5D64 /* ForgotPasswordScreen.swift in Sources */,
 				84140C0729658DD200FA5D64 /* UIViewController+Extension.swift in Sources */,
 				84140C1529658EAA00FA5D64 /* GetListIdResponse.swift in Sources */,
 				84801DEF295F359D003BD218 /* ContentView.swift in Sources */,
+				84140C1C2965925D00FA5D64 /* HomeScreen.swift in Sources */,
 				84801DED295F359D003BD218 /* USFarmDataApp.swift in Sources */,
 				84140C0B29658E7600FA5D64 /* AppUtils.swift in Sources */,
 				84140C1229658EAA00FA5D64 /* GetListsResponse.swift in Sources */,
 				84140C1329658EAA00FA5D64 /* LoginResponse.swift in Sources */,
 				84140C1429658EAA00FA5D64 /* ListModel.swift in Sources */,
+				84140C192965923C00FA5D64 /* LoginScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
