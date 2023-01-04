@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SplashScreen: View {
+    @EnvironmentObject var userData: UserData
     @State private var showSplash = true
     
     var body: some View {
@@ -18,7 +19,11 @@ struct SplashScreen: View {
                     .scaledToFit()
                     .frame(width: 240, height: 128)
             } else {
-                LoginScreen()
+                if userData.token != nil {
+                    HomeScreen()
+                } else {
+                    LoginScreen()
+                }
             }
         }
         .onAppear {
@@ -34,5 +39,6 @@ struct SplashScreen: View {
 struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreen()
+            .environmentObject(UserData())
     }
 }

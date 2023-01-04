@@ -20,12 +20,14 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct USFarmDataApp: App {
+    @StateObject private var userData = UserData()
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userData)
         }
     }
 }
