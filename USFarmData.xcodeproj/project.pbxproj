@@ -51,6 +51,7 @@
 		84B8A5BA296722440011AE8A /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		84B8A5BC296727990011AE8A /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		84B8A5BE29673EFE0011AE8A /* ErrorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorData.swift; sourceTree = "<group>"; };
+		84B8A5C02967441D0011AE8A /* USFarmData-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "USFarmData-Bridging-Header.h"; sourceTree = "<group>"; };
 		A5A12C2BEF2DAF819F5F910B /* Pods-USFarmData.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-USFarmData.release.xcconfig"; path = "Target Support Files/Pods-USFarmData/Pods-USFarmData.release.xcconfig"; sourceTree = "<group>"; };
 		FD6A170A4D9FCCC7DD6576C4 /* Pods_USFarmData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_USFarmData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,6 +173,7 @@
 				84140C172965920C00FA5D64 /* Views */,
 				84801DF0295F359E003BD218 /* Assets.xcassets */,
 				84801DF2295F359E003BD218 /* Preview Content */,
+				84B8A5C02967441D0011AE8A /* USFarmData-Bridging-Header.h */,
 			);
 			path = USFarmData;
 			sourceTree = "<group>";
@@ -218,6 +220,7 @@
 				TargetAttributes = {
 					84801DE8295F359D003BD218 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -441,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"USFarmData/Preview Content\"";
@@ -459,6 +463,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.USFarmData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "USFarmData/USFarmData-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -470,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"USFarmData/Preview Content\"";
@@ -488,6 +495,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.USFarmData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "USFarmData/USFarmData-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
