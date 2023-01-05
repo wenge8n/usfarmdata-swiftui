@@ -11,6 +11,7 @@ struct LoginScreen: View {
     @EnvironmentObject var userData: UserData
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var showPassword: Bool = false
     
     var body: some View {
         VStack(spacing: 0) {
@@ -27,10 +28,28 @@ struct LoginScreen: View {
                 .textFieldStyle(.roundedBorder)
                 .font(.system(size: 17))
                 .padding(.top, 25)
-            SecureField("Password", text: $password)
+            ZStack(alignment: .trailing) {
+                Group {
+                    if !showPassword {
+                        SecureField("Password", text: $password)
+                    } else {
+                        TextField("Password", text: $password)
+                            .disableAutocorrection(true)
+                            .autocapitalization(.none)
+                    }
+                }
                 .textFieldStyle(.roundedBorder)
                 .font(.system(size: 17))
-                .padding(.top, 15)
+                
+                Button {
+                    showPassword.toggle()
+                } label: {
+                    Image(systemName: !self.showPassword ? "eye" : "eye.slash")
+                        .foregroundColor(.gray)
+                }
+                .padding(.trailing, 8)
+            }
+            .padding(.top, 15)
         }
         .padding(16)
     }
