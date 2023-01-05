@@ -22,7 +22,9 @@ struct SplashScreen: View {
                 if userData.token != nil {
                     HomeScreen()
                 } else {
-                    LoginScreen()
+                    NavigationView {
+                        LoginScreen()
+                    }
                 }
             }
         }

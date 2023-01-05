@@ -50,6 +50,18 @@ struct LoginScreen: View {
                 .padding(.trailing, 8)
             }
             .padding(.top, 15)
+            
+            HStack {
+                Spacer()
+                NavigationLink {
+                    ForgotPasswordScreen()
+                } label: {
+                    Text("Forgot your password?")
+                        .font(.system(size: 12))
+                        .foregroundColor(.black.opacity(0.4))
+                }
+            }
+            .padding(.top, 15)
         }
         .padding(16)
     }
