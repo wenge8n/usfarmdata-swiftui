@@ -62,8 +62,30 @@ struct LoginScreen: View {
                 }
             }
             .padding(.top, 15)
+            
+            Button {
+                loginTapped()
+            } label: {
+                HStack(spacing: 0) {
+                    Spacer()
+                    Image(systemName: "rectangle.portrait.and.arrow.right")
+                        .font(.system(size: 15))
+                    Text("Sign In")
+                        .font(.system(size: 15))
+                        .padding(.leading, 20)
+                    Spacer()
+                }
+                .foregroundColor(.white)
+                .frame(height: 48)
+            }
+            .background(Color(hex: "#00600A"))
+            .cornerRadius(24)
+            .padding(.top, 30)
         }
         .padding(16)
+    }
+    
+    func loginTapped() {
     }
 }
 
