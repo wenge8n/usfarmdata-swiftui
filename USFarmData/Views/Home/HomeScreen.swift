@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    @EnvironmentObject var userData: UserData
     @State private var listData: [ListModel] = []
     
     var body: some View {
@@ -26,6 +27,10 @@ struct HomeScreen: View {
                 .padding(.top, 25)
             }
             .navigationTitle("Home")
+            .navigationBarItems(trailing: Button("Logout") {
+                UserDefaults.standard.removeObject(forKey: Constants.KEY_ACCESS_TOKEN)
+                userData.token = nil
+            })
         }
     }
 }
