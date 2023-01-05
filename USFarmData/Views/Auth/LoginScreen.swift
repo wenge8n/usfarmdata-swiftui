@@ -9,6 +9,7 @@ import SwiftUI
 
 struct LoginScreen: View {
     @EnvironmentObject var userData: UserData
+    @EnvironmentObject var errorData: ErrorData
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false

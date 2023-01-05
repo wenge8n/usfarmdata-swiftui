@@ -21,6 +21,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct USFarmDataApp: App {
     @StateObject private var userData = UserData()
+    @StateObject private var errorData = ErrorData()
     
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
@@ -28,6 +29,7 @@ struct USFarmDataApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(userData)
+                .environmentObject(errorData)
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SplashScreen: View {
     @EnvironmentObject var userData: UserData
+    @EnvironmentObject var errorData: ErrorData
     @State private var showSplash = true
     
     var body: some View {
@@ -19,12 +20,15 @@ struct SplashScreen: View {
                     .scaledToFit()
                     .frame(width: 240, height: 128)
             } else {
-                if userData.token != nil {
-                    HomeScreen()
-                } else {
-                    NavigationView {
+                NavigationView {
+                    if userData.token != nil {
+                        HomeScreen()
+                    } else {
                         LoginScreen()
                     }
+                }
+                .alert(errorData.message, isPresented: $errorData.showAlert) {
+                    Button("OK", role: .cancel) { }
                 }
             }
         }
@@ -42,5 +46,6 @@ struct SplashScreen_Previews: PreviewProvider {
     static var previews: some View {
         SplashScreen()
             .environmentObject(UserData())
+            .environmentObject(ErrorData())
     }
 }

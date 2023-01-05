@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject var userData: UserData
+    @EnvironmentObject var errorData: ErrorData
     @State private var listData: [ListModel] = []
     
     var body: some View {
