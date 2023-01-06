@@ -24,8 +24,11 @@ struct HomeScreen: View {
             List {
                 ForEach(listData) { item in
                     ListRow(item: item)
+                        .listRowInsets(EdgeInsets())
+                        .listRowSeparator(.hidden)
                 }
             }
+            .listStyle(.plain)
             .padding(.top, 25)
         }
         .navigationTitle("Saved Lists")
