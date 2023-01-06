@@ -33,7 +33,7 @@ struct HomeScreen: View {
             UserDefaults.standard.removeObject(forKey: Constants.KEY_ACCESS_TOKEN)
             userData.token = nil
         })
-        .onAppear {
+        .onViewDidLoad {
             getListId()
         }
     }
