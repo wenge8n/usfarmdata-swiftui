@@ -15,6 +15,11 @@ struct LoginScreen: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var showPassword: Bool = false
+    @FocusState private var focusedField: FocusedField?
+    
+    enum FocusedField {
+        case email, password
+    }
     
     var body: some View {
         VStack(spacing: 0) {
@@ -31,6 +36,11 @@ struct LoginScreen: View {
                 .textFieldStyle(.roundedBorder)
                 .font(.system(size: 17))
                 .padding(.top, 25)
+                .submitLabel(.next)
+                .focused($focusedField, equals: .email)
+                .onSubmit {
+                    focusedField = .password
+                }
             ZStack(alignment: .trailing) {
                 Group {
                     if !showPassword {
@@ -43,6 +53,10 @@ struct LoginScreen: View {
                 }
                 .textFieldStyle(.roundedBorder)
                 .font(.system(size: 17))
+                .focused($focusedField, equals: .password)
+                .onSubmit {
+                    loginTapped()
+                }
                 
                 Button {
                     showPassword.toggle()
